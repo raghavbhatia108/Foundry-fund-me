@@ -23,3 +23,32 @@ This project demonstrates:
 ---
 
 ## 📂 Project Structure
+
+```
+foundry-fundMe/
+│
+├── src/
+│   ├── FundMe.sol              # Main crowdfunding contract
+│   └── PriceConverter.sol      # Chainlink price conversion library
+│
+├── script/
+│   ├── DeployFundMe.s.sol      # Deployment script
+│   ├── HelperConfig.s.sol      # Network configuration helper
+│   └── Interactions.s.sol      # Fund & Withdraw interaction scripts
+│
+├── test/
+│   ├── unit/
+│   │   └── FundMeTest.t.sol        # Unit tests
+│   │
+│   ├── integration/
+│   │   └── InteractionsTest.t.sol  # Integration tests
+│   │
+│   └── mocks/
+│       └── MockV3Aggregator.sol    # Mock Chainlink price feed
+│
+├── lib/                        # Dependencies (forge-std, chainlink, etc.)
+├── foundry.toml                # Foundry configuration
+├── foundry.lock                # Dependency lock file
+├── Makefile                    # Automation commands
+└── README.md                   # Project documentation
+```
